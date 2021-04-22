@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditions générales</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Conditions générales</h1>
+      <h2>Exo n°4:</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, ipsa
+        voluptatibus? Dolores, hic animi voluptates, temporibus reprehenderit
+        assumenda sed dolorum enim soluta molestiae tempore eaque? Magnam
+        delectus neque debitis corporis accusamus voluptate, possimus illum
+        cupiditate impedit vel voluptatum molestias? Assumenda, rem praesentium.
+        Cumque dolorem nulla, eligendi animi voluptatum quod magnam, ipsam
+        temporibus culpa sapiente magni sint nemo porro commodi autem aperiam
+        distinctio quaerat inventore illo corporis harum? Consectetur ducimus
+        laudantium voluptatibus necessitatibus, distinctio earum neque eligendi
+        ullam consequuntur, saepe eaque sunt iusto similique odit natus
+        architecto perspiciatis dolores dicta itaque nulla officiis beatae fuga
+        ipsam. Veritatis aliquam obcaecati dolorem nesciunt.
+      </p>
+
+      <form>
+        <p>
+          <input
+            v-on:click="afficher"
+            type="radio"
+            value="oui"
+            name="btn-radio"
+          />
+          {{accepterCGV}}
+        </p>
+        <p>
+          <input
+            v-on:click="refuser"
+            type="radio"
+            value="oui"
+            name="btn-radio"
+          />
+          {{refuserCGV}}
+        </p>
+
+        <p>
+          <input
+            v-if="voirBtnSubmit"
+            type="submit"
+            value="Je valide ma commande"
+          />
+        </p>
+      </form>
+      <p class="balise-quitter">
+        <a v-if="afficherURL" href="lien">Quitter la page</a>
+      </p>
+    </div>
+    <script src="vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
